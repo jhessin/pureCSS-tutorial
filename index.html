@@ -1,0 +1,264 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+      integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      #header {
+        background-color: teal;
+        text-align: center;
+        border-bottom: solid 1px black;
+      }
+
+      #profile-dropdown {
+        position: relative;
+        top: 15px;
+      }
+
+      #profile-dropdown > * {
+        width: 100px;
+      }
+
+      #main {
+        height: 90%;
+      }
+
+      #col-one {
+        max-height: 100%;
+        background-color: orange;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+      }
+
+      #all-chats-container {
+        flex-grow: 1;
+      }
+
+      #col-two {
+        max-height: 100%;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+      }
+
+      #col-two .left-message {
+        margin-left: 10px;
+      }
+
+      #col-two .right-message {
+        text-align: end;
+        margin-left: auto;
+        margin-right: 10px;
+      }
+
+      #current-chat-container {
+        flex-grow: 1;
+      }
+
+      #col-three {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pure-g" id="header">
+      <div class="pure-u-1 pure-u-sm-1-4" id="profile-dropdown">
+        <div
+          class="
+            pure-menu-item
+            pure-menu-has-children
+            pure-menu-selected
+            pure-menu-allow-hover
+          "
+        >
+          <a href="#" class="pure-menu-link">Profile</a>
+          <ul class="pure-menu-children">
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Account</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Chat Settings</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Status</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-sm-1-2" id="title">
+        <h1>Zenva Messaging</h1>
+      </div>
+    </div>
+    <div class="pure-g" id="main">
+      <div class="pure-u-1 pure-u-sm-1-3 pure-u-xl-1-4" id="col-one">
+        <div class="pure-menu pure-menu-scrollable" id="all-chats-container">
+          <ul class="pure-menu-list">
+            <li class="pure-menu-heading">
+              <a href="#" class="pure-menu-link">All Groups</a>
+            </li>
+            <li class="pure-menu-item pure-menu-selected">
+              <a href="#" class="pure-menu-link">All Messages</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Unreads</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Mentions</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Announcements</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">All Channels</a>
+            </li>
+
+            <br /><br />
+
+            <li class="pure-menu-heading">
+              <a href="#" class="pure-menu-link">All Messages</a>
+            </li>
+            <li class="pure-menu-item pure-menu-selected">
+              <a href="#" class="pure-menu-link">Design</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Engineering</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Finance</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Team</a>
+            </li>
+            <li class="pure-menu-item">
+              <a href="#" class="pure-menu-link">Clothing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pure-u-1 pure-u-sm-2-3 pure-u-xl-1-2" id="col-two">
+        <div class="pure-menu pure-menu-scrollable" id="current-chat-container">
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item right-message">
+              <h3>You</h3>
+              <p>Message Text Here</p>
+            </li>
+            <li class="pure-menu-item left-message">
+              <h3>Team Member 1</h3>
+              <p>Message Text Here</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-xl-1-4" id="col-three">Column three text</div>
+    </div>
+  </body>
+</html>
