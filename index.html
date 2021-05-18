@@ -42,6 +42,10 @@
         height: 90%;
       }
 
+      h2 {
+        padding-left: 20px;
+      }
+
       #col-one {
         max-height: 100%;
         background-color: orange;
@@ -62,22 +66,49 @@
       }
 
       #col-two .left-message {
+        text-align: end;
         margin-left: 10px;
       }
 
       #col-two .right-message {
-        text-align: end;
+        text-align: start;
         margin-left: auto;
         margin-right: 10px;
       }
 
       #current-chat-container {
         flex-grow: 1;
+        direction: rtl;
+      }
+
+      #tools-buttons {
+        margin: 20px auto;
+        text-align: center;
+        width: 90%;
+      }
+
+      #chat-form {
+        padding: 10px;
       }
 
       #col-three {
         background-color: aquamarine;
       }
+
+      #table-container {
+        margin: 20px auto;
+        text-align: center;
+        width: 90%;
+      }
+
+      #table-container > *{
+        width: 100%;
+      }
+
+      #table-container th {
+        text-align: center;
+      }
+      
     </style>
   </head>
 
@@ -115,7 +146,8 @@
     </div>
     <div class="pure-g" id="main">
       <div class="pure-u-1 pure-u-sm-1-3 pure-u-xl-1-4" id="col-one">
-        <div class="pure-menu pure-menu-scrollable" id="all-chats-container">
+        <h2>Chats</h2>
+        <div class="pure-u-11-12 pure-u-xl-1 pure-menu" id="all-chats-container">
           <ul class="pure-menu-list">
             <li class="pure-menu-heading">
               <a href="#" class="pure-menu-link">All Groups</a>
@@ -161,7 +193,8 @@
       </div>
 
       <div class="pure-u-1 pure-u-sm-2-3 pure-u-xl-1-2" id="col-two">
-        <div class="pure-menu pure-menu-scrollable" id="current-chat-container">
+        <h2>Design</h2>
+        <div class="pure-u-11-12 pure-u-xl-1 pure-menu pure-menu-scrollable" id="current-chat-container">
           <ul class="pure-menu-list">
             <li class="pure-menu-item left-message">
               <h3>Team Member 1</h3>
@@ -257,8 +290,91 @@
             </li>
           </ul>
         </div>
+
+        <form
+          action="submit"
+          class="pure-form pure-form-stacked"
+          id="chat-form"
+        >
+          <fieldset>
+            <legend>Send a message</legend>
+            <input
+              type="text"
+              name=""
+              class="pure-input-1 pure-input-rounded"
+              placeholder="Message"
+            />
+            <button type="submit" class="pure-button pure-button-primary">
+              Send
+            </button>
+          </fieldset>
+        </form>
       </div>
-      <div class="pure-u-1 pure-u-xl-1-4" id="col-three">Column three text</div>
+
+      <div class="pure-u-1 pure-u-xl-1-4" id="col-three">
+        <h2>Tools</h2>
+        <div
+          class="pure-button-group"
+          role="group"
+          aria-label="..."
+          id="tools-buttons"
+        >
+          <button class="pure-button pure-button-active">Calendar</button>
+          <button class="pure-button">Tasks</button>
+          <button class="pure-button">Contacts</button>
+          <button class="pure-button">Notes</button>
+        </div>
+
+        <div id="table-container">
+          <table class="pure-table pure-table-bordered">
+            <thead>
+              <tr>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
 </html>
